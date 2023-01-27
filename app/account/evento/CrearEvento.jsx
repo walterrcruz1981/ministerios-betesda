@@ -102,9 +102,9 @@ export default function CrearEvento() {
                 </label>
                 <label htmlFor="location">Lugar:<input required name='location' type='text' placeholder='Donde sera el evento, ejemplo --betesda/salon1' value={evento.location} onChange={handleChange} />
                 </label>
-                <label htmlFor="invitePhrase">Texto de atencion:<input required name='invitePhrase' type='text' placeholder='palabras con emocion para invitar' value={evento.invitePhrase} onChange={handleChange} />
+                <label htmlFor="invitePhrase">Texto de atencion:<input required name='invitePhrase' type='text' placeholder='palabras para invitar' value={evento.invitePhrase} onChange={handleChange} />
                 </label>
-                <label htmlFor="description">Description:<textarea required name='description' type='text' placeholder='discripcion del evento' value={evento.description} onChange={handleChange} />
+                <label htmlFor="description">Description:<textarea required rows='10' cols='45' name='description' type='text' placeholder='discripcion del evento' value={evento.description} onChange={handleChange} />
                 </label>
                 <label htmlFor="invitePhrase">image:<input required name='image' type='file' accept='image/jpg, image/png, image/jpeg' placeholder='image' onChange={handleImageChange} />
                 </label>

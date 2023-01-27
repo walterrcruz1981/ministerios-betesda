@@ -9,7 +9,12 @@
     display: flex;
     justify-content: center;
 
-    a:nth-of-type(1, 2) {
+    .login {
+        margin-top: 3em;
+        width: 500px;
+    }
+
+    a:nth-of-type(1) {
         color: blue;
         text-decoration: underline;
         padding: 1em;
@@ -41,6 +46,12 @@
                     transition: font-size 300ms ease-in-out;
                 }
             }
+        }
+    }
+
+    @media (max-width: 800px) {
+        .login {
+            width: 300px;
         }
     }
 }

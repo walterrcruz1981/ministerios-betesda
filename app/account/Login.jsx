@@ -9,7 +9,7 @@ export default function Login() {
         <Auth
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
-            providers={['github']}
+            providers={['github', 'google']}
             theme='dark'
             redirectTo={"https://yahoo.com/account"}
         />

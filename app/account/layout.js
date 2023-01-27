@@ -33,7 +33,8 @@ export default function RootLayout({ children }) {
     return (
         <div className={styles.accountContainer}>
             {!session ? (
-                <Login />
+                <div className={styles.login}><Login /></div>
+
             ) : (
                 <div>
                     <div className={styles.titleArea}>
