@@ -10,7 +10,7 @@ export default function GateWay() {
     useEffect(() => {
         async function getUserStatus() {
             const { data, error } = await supabase.from('profiles')
-                .select('is_admin')
+                .select('page_role')
                 .match({ 'id': session.user.id })
                 .single()
             if (data) { setAdmin(data.is_admin) }
