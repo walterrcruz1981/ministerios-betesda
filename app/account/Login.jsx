@@ -11,7 +11,6 @@ export default function Login() {
             appearance={{ theme: ThemeSupa }}
             providers={['github', 'google']}
             theme='dark'
-            redirectTo={"https://yahoo.com/account"}
         />
     )
 }

@@ -7,10 +7,8 @@ import Login from './Login'
 import logo from '../../public/images/logo/logo.png'
 import Image from 'next/image'
 import { FaSignOutAlt } from 'react-icons/fa'
-import Link from 'next/link'
 
 export default function RootLayout({ children }) {
-    const cdn = 'https://tczhqchszhcthbqeyrgy.supabase.co/storage/v1/object/public/avatars/'
     const session = useSession()
     const supabase = useSupabaseClient()
     const [profile, setProfile] = useState()
@@ -35,14 +33,13 @@ export default function RootLayout({ children }) {
             {!session ? (
                 <div className={styles.login}>
                     <Login />
-
                 </div>
             ) : (
                 <div>
                     <div className={styles.titleArea}>
                         <h4>Ministerios Betesda</h4>
                         <div className={styles.userInfo}>
-                            <Image src={cdn + profile?.avatar_url || logo} width={50} height={50} alt='avatar image' />
+                            <Image src={profile?.avatar_url || logo} width={50} height={50} alt='avatar image' />
                             <h3>Hola {profile?.full_name}</h3>
                             <FaSignOutAlt className={styles.signOut} onClick={() => supabase.auth.signOut()} />
                         </div>
