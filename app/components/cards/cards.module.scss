@@ -1,0 +1,86 @@
+//Event Card
+.eventCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    border-radius: .4em;
+    background-color: rgb(255, 255, 255);
+    color: #103a52;
+    outline: 1px solid black;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    p {
+        padding: .4em 0;
+    }
+
+}
+
+//LinkCard
+.linkCardContainer {
+    position: relative;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.26);
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .cardContent {
+        width: 70%;
+        height: 100%;
+        line-height: .4em;
+        color: white;
+
+        a {
+            background-color: white;
+            padding: 1.4em 2.2em;
+            border-radius: 9px;
+            font-weight: 700;
+            color: rgb(58, 58, 180);
+            align-items: center;
+
+            &:hover {
+                color: grey;
+            }
+        }
+    }
+
+}
+
+//simple card
+.simpleCardContainer {
+    margin: 1em 0;
+    border-radius: 9px;
+    overflow: hidden;
+    text-align: center;
+    outline: 1px solid black;
+
+    .image {
+        overflow: hidden;
+        background-color: black;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            z-index: -1;
+
+            &:hover {
+                filter: sepia(.2);
+                transform: scale(1.1);
+                transition: all ease-in-out 500ms;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,84 @@
+.ronaldContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+    line-height: 2.2em;
+    letter-spacing: 1px;
+
+
+    .hero {
+        width: 100%;
+        position: relative;
+
+        .heroContent {
+            display: flex;
+            height: 35em;
+            width: 80%;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            .heroImage {
+                position: relative;
+                box-shadow: 1px 10px 30px rgba(255, 255, 255, 0.3);
+                width: 400px;
+
+                img {
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .textContent {
+                padding: 1em;
+            }
+        }
+    }
+
+    .description {
+        width: 100%;
+        padding: 2em;
+        font-size: large;
+
+        img {
+            float: left;
+            object-fit: contain;
+            padding: 1em;
+        }
+
+        img:last-of-type {
+            float: right;
+        }
+    }
+
+
+    @media (max-width: 700px) {
+        margin: .5em 0;
+
+        img {
+            width: 100%;
+            float: none;
+        }
+
+        .hero {
+            height: 20em;
+
+            .heroContent {
+                height: 20em;
+                width: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .heroImage {
+                    height: 23em;
+                    box-shadow: none;
+                    overflow: hidden;
+                }
+
+                .textContent {
+                    width: 100%;
+                    font-size: .6em;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

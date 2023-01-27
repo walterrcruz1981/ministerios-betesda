@@ -1,0 +1,77 @@
+//account layout container
+.accountContainer {
+    max-width: 1400px;
+    min-height: 100vh;
+    margin: 2em auto;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    a:nth-of-type(1, 2) {
+        color: blue;
+        text-decoration: underline;
+        padding: 1em;
+    }
+
+    .titleArea {
+        width: 70vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2em 0;
+        border-bottom: 1px solid black;
+
+        .userInfo {
+            display: flex;
+            align-items: center;
+            gap: .4em;
+
+            img {
+                border-radius: 50%;
+            }
+
+            .signOut {
+                color: blue;
+                font-size: 2em;
+
+                &:hover {
+                    font-size: 2.1em;
+                    transition: font-size 300ms ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+//account mmodule container
+.account {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .bodyContent {
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+
+        .accountGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1em;
+            margin: 1em 2em;
+
+            .card {
+                height: 300px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                box-shadow: inset 2px 2px 30px red, 1px 3px 3px rgb(250, 250, 250);
+            }
+        }
+    }
+}
