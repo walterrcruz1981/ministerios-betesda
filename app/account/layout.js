@@ -4,6 +4,7 @@ import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react'
 import { useEffect, useState } from 'react'
 import styles from './account.module.scss'
 import Login from './Login'
+import logo from '../../public/images/logo/logo.png'
 import Image from 'next/image'
 import { FaSignOutAlt } from 'react-icons/fa'
 import Link from 'next/link'
@@ -17,7 +18,6 @@ export default function RootLayout({ children }) {
         if (session) {
             getProfiles()
         }
-
 
     }, [session])
     async function getProfiles() {
@@ -33,22 +33,21 @@ export default function RootLayout({ children }) {
     return (
         <div className={styles.accountContainer}>
             {!session ? (
-                <div className={styles.login}><Login /></div>
+                <div className={styles.login}>
+                    <Login />
 
+                </div>
             ) : (
                 <div>
                     <div className={styles.titleArea}>
                         <h4>Ministerios Betesda</h4>
                         <div className={styles.userInfo}>
-                            <Image src={cdn + profile?.avatar_url || ''} width={50} height={50} alt='avatar image' />
+                            <Image src={cdn + profile?.avatar_url || logo} width={50} height={50} alt='avatar image' />
                             <h3>Hola {profile?.full_name}</h3>
                             <FaSignOutAlt className={styles.signOut} onClick={() => supabase.auth.signOut()} />
                         </div>
                     </div>
-                    <>
-                        <Link href={'/account/evento'}>Crear Eventos</Link>
-                        <Link href={'/account/slides'}>Crear Slides</Link>
-                        {children}</>
+                    {children}
                 </div>
             )}
         </div>

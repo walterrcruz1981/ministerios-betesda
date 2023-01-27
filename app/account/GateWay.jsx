@@ -1,8 +1,8 @@
 'use client'
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react"
 import { useEffect, useState } from "react"
-import AdminAccount from "./AdminAccount"
-import NormalUser from "./NormalUsers"
+import AdminAccount from "./admin/AdminAccount"
+import NormalUser from "./normal-user/NormalUsers"
 export default function GateWay() {
     const session = useSession()
     const supabase = useSupabaseClient()
