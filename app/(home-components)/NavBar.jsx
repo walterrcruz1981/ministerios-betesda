@@ -32,7 +32,7 @@ const NavBar = () => {
                     <Link key={index} href={link.url}>{link.name}</Link>
                 ))}
                 <div className={styles.admin}>
-                    {session ? <Link href={'/account'}>Admin</Link> : null}
+                    {session ? <Link href={'/account'}>My Account</Link> : null}
                     {session ? <FaSignOutAlt onClick={() => supabase.auth.signOut()} /> : null}
                 </div>
             </div>
@@ -45,7 +45,7 @@ const NavBar = () => {
                         <Link key={link.name} href={link.url} onClick={() => setActiveNav(!activeNav)}>{link.name}</Link>
                     ))}
                     <div className={styles.admin}>
-                        {session ? <Link href={'/account'}>Admin</Link> : null}
+                        {session ? <Link href={'/account'}>My Account</Link> : null}
                         {session ? <FaSignOutAlt onClick={() => supabase.auth.signOut()} /> : null}
                     </div>
                 </div> : null}

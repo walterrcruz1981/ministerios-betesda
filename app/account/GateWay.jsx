@@ -13,7 +13,7 @@ export default function GateWay() {
                 .select('page_role')
                 .match({ 'id': session.user.id })
                 .single()
-            if (data) { setAdmin(data.is_admin) }
+            if (data) { setAdmin(data.page_role) }
             if (error) { throw error }
         }
         getUserStatus()
